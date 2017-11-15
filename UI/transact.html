@@ -15,12 +15,14 @@
 <h1 align="center">Transact</h1>
 <div class="medium-centered row">
     <div class="medium-4 medium-centered columns">
-        <form onsubmit="window.location.href=http://172.16.133.50:3000/explorer" method="post">
-            <input type="text" placeholder="PropertyID">
-            <input type="text" placeholder="oldowner">
-            <input type="text" placeholder="newowner">
-            <input type="text" placeholder="type">
-            <input type="number" placeholder="newprice">
+        <form enctype="application/json" action="http://172.16.133.50:3000/api/SampleTransaction" method="post">
+            <input type="hidden" value="org.acme.biznet.SampleTransaction" id="$class">
+            <input type="text" name="asset" placeholder="Asset Id">
+            <input type="text" name="newValue" placeholder="New Cost">
+            <input type="text" name="oldOwner" placeholder="Old Owner">
+            <input type="text" name="newOwner" placeholder="New Owner">
+            <input type="text" name="valueOfTransaction" placeholder="Value of Transaction">
+            <input type="text" name="type" placeholder="Type">
             <input name="submit" type="submit" class="medium-12 button large">
         </form>
     </div>
