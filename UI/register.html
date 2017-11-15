@@ -15,14 +15,16 @@
 <h1 align="center">Register</h1>
 <div class="medium-centered row">
   <div class="medium-4 medium-centered columns">
-    <form enctype="application/json" action="http://172.16.133.50:3000/explorer/#1/LandAsset/LandAsset_create" method="post">
-      <input type="text" id="assetId" placeholder="PropertyID">
-      <label>Property Details</label>
-      <input type="number" placeholder="Area">
-      <input type="number" placeholder="Cost">
-      <input type="text" placeholder="owner" id="owner">
-      <input type="submit" class="button medium-12">
-    </form>
+    <form enctype="application/json" action="http://172.16.133.50:3000/api/LandAsset" method="post">
+            <input type="hidden" value="org.acme.biznet.LandAsset" id="$class">
+            <input type="text" name="assetId" placeholder="Asset Id">
+            <input type="text" name="owner" placeholder="Owner">
+            <input type="text" name="current_occupant" placeholder="Current Occupant">
+            <input type="text" name="type" placeholder="type">
+            <input type="text" name="address" placeholder="Address">
+            <input type="text" name="value" placeholder="Cost">
+            <input name="submit" type="submit" class="medium-12 button large">
+        </form>
   </div>
 </div>
 </body>
