@@ -1,0 +1,46 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace org.acme.biznet
+
+/**
+ * Sample business network definition.
+ */
+
+
+asset LandAsset identified by assetId {
+  o String assetId
+  --> Client owner
+  --> Client current_occupant
+  o String type
+  o String address
+  o String value
+}
+
+participant Client identified by clientId {
+  o String clientId
+  o String firstName
+  o String lastName
+  o String type
+  
+}
+
+transaction SampleTransaction {
+  --> LandAsset asset
+  o String newValue
+  -->Client oldOwner
+  -->Client newOwner
+  o String valueOfTransaction
+  o String type
+  
+}
+
+event SampleEvent {
+  --> LandAsset asset
+  o String oldValue
+  o String newValue
+  -->Client oldOwner
+  -->Client newOwner
+  
+}
