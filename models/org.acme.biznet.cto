@@ -1,7 +1,13 @@
 /**
+ * Write your model definitions here
+ */
+
+namespace org.acme.biznet
+
+/**
  * Sample business network definition.
  */
-namespace org.acme.sample
+
 
 asset LandAsset identified by assetId {
   o String assetId
