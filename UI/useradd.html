@@ -15,14 +15,27 @@
 <h1 align="center">Register User</h1>
 <div class="medium-centered row">
   <div class="medium-4 medium-centered columns">
-    <form enctype="application/json" action="http://localhost:3000/api/Client" method="post">
-    <input type="text" name="clientId" placeholder="clientId">
-    <input type="text" id="firstName" name="firstName" placeholder="firstName">
-    <input type="hidden" value="org.acme.biznet.Client" id="$class">
-    <input type="text" name="lastName" placeholder="lastName">
-    <input type="text" name="type" placeholder="type">
-    <input type="submit" class="button medium-12">
-</form>
+    <input type="text" id = "clientId" name="clientId" placeholder="clientId">
+    <input type="text" id = "firstName" name="firstName" placeholder="firstName">
+    <input type="hidden" value ="org.acme.biznet.Client" id="$class">
+    <input type="text" id="lastName"name="lastName" placeholder="lastName">
+    <input type="text" id="type" name="type" placeholder="type">
+    <button id="submitButton" class="button medium-12">Submit</button>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAY1Jif3ni8AAcAwPK_cZict1a8T5nBcNU",
+        authDomain: "smartcontract1996.firebaseapp.com",
+        databaseURL: "https://smartcontract1996.firebaseio.com",
+        projectId: "smartcontract1996",
+        storageBucket: "smartcontract1996.appspot.com",
+        messagingSenderId: "110733921386"
+      };
+      firebase.initializeApp(config);
+      console.log("done");
+    </script>
+    <script src="js/addUser.js"></script>
   </div>
 </div>
 </body>
