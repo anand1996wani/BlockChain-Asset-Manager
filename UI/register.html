@@ -15,16 +15,30 @@
 <h1 align="center">Register Property</h1>
 <div class="medium-centered row">
   <div class="medium-4 medium-centered columns">
-    <form enctype="application/json" action="http://localhost:3000/api/LandAsset" method="post">
+    
             <input type="hidden" value="org.acme.biznet.LandAsset" id="$class">
-            <input type="text" name="assetId" placeholder="Asset Id">
-            <input type="text" name="owner" placeholder="Owner">
-            <input type="text" name="current_occupant" placeholder="Current Occupant">
-            <input type="text" name="type" placeholder="type">
-            <input type="text" name="address" placeholder="Address">
-            <input type="text" name="value" placeholder="Cost">
-            <input name="submit" type="submit" class="medium-12 button large">
-        </form>
+            <input type="text" id = "assetId" name="assetId" placeholder="Asset Id">
+            <input type="text" id = "owner" name="owner" placeholder="Owner">
+            <input type="text" id = "currentOccupant" name="current_occupant" placeholder="Current Occupant">
+            <input type="text" id = "type" name="type" placeholder="type">
+            <input type="text" id = "address" name="address" placeholder="Address">
+            <input type="text" id = "cost" name="value" placeholder="Cost">
+            <input name="submit" id = "submitButton" type="submit" class="medium-12 button large">
+            <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+            <script>
+                // Initialize Firebase
+                var config = {
+                  apiKey: "AIzaSyAY1Jif3ni8AAcAwPK_cZict1a8T5nBcNU",
+                  authDomain: "smartcontract1996.firebaseapp.com",
+                  databaseURL: "https://smartcontract1996.firebaseio.com",
+                  projectId: "smartcontract1996",
+                  storageBucket: "smartcontract1996.appspot.com",
+                  messagingSenderId: "110733921386"
+                };
+                firebase.initializeApp(config);
+                console.log("done");
+              </script>
+              <script src = "js/registerProperty.js" ></script>
   </div>
 </div>
 </body>
