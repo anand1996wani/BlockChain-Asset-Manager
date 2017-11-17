@@ -1,8 +1,10 @@
+var ipAddress = "127.0.0.1"
+
 var btn = document.getElementById("submitButton"); 
 btn.addEventListener("click", function() {
 	var ourRequest = new XMLHttpRequest();
 	var clientId= document.getElementById("clientId").value;
-	var url = "http://localhost:3000/api/Client/";
+	var url = "http://"+ipAddress+":3000/api/Client/";
 	url = url + clientId;
 ourRequest.open('GET',url);
 ourRequest.onload = function() {
